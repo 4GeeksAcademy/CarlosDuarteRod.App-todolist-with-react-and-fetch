@@ -26,12 +26,10 @@ const Home = () => {
 		fetchUsers();
 	}, [])
 
-
-
 	return (
 		<div className="text-center">
 			<ul>
-				{users? users.map((users)=> <li>{users.userId} - {users.id} - {users.title} {users.completed? <i className="fa-solid fa-check text-success"></i> : <i className="fa-solid fa-xmark text-danger"></i>} </li>) 
+				{users? users.map((item)=> <li>{item.userId} - {item.id} - {item.title} {item.completed? <i className="fa-solid fa-check text-success"></i> : <i className="fa-solid fa-xmark text-danger"></i>} </li>) 
 				: "Leyendo datos"}
 			</ul>
 		</div>
